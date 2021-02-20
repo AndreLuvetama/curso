@@ -28,7 +28,7 @@ public class Order  implements Serializable {
     //Garante que a data seja aprensetado no formato ISO
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'TT'HH:mm:ss'Z'", timezone= "GMT")
 	private Instant moment;
-    private Integer orderStatus;
+    private OrderStatus orderSatus;
 	
 	@ManyToOne
 	@JoinColumn(name = "cliente_id") // cliente_id nome da chave estrangeira 
@@ -37,11 +37,11 @@ public class Order  implements Serializable {
 	
 	public Order() {}
 
-	public Order(Long id, Instant moment, OrderStatus orderStatus, User client) {
+	public Order(Long id, Instant moment, OrderStatus orderSatus, User client) {
 		super();
 		this.id = id;
 		this.moment = moment;
-		setOrderSatus(orderStatus);
+		this.orderSatus = orderSatus;
 		this.client = client;
 	}
 
@@ -59,21 +59,6 @@ public class Order  implements Serializable {
 
 	public void setMoment(Instant moment) {
 		this.moment = moment;
-	}
-	
-	
-	public OrderStatus getOrderSatus() {
-		return OrderStatus.valueOf(orderStatus);
-	}
-
-	public void setOrderSatus(OrderStatus orderStatus) {
-		if(orderStatus != null ) {
-			this.orderStatus = orderStatus.getCode();
-		}
-	}
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
 	}
 
 	public User getClient() {
