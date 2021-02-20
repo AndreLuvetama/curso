@@ -12,7 +12,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 
 @Entity
@@ -28,7 +28,7 @@ public class User implements Serializable {
 	private String phone;
 	private String password;
 	
-	@JsonIgnore // ignora o loop causado pela biblioteca JsonIgnore 
+
 	@OneToMany(mappedBy = "client")
 	private List<Order> orders = new ArrayList<>(); // para gerar relacionamento com Order
 	
