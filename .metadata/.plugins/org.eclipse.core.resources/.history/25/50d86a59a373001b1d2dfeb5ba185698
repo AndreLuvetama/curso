@@ -1,0 +1,5 @@
+package com.ramotetech.curso.service;
+
+public class UserService {
+
+}

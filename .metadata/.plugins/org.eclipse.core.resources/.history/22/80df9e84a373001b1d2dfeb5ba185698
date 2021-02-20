@@ -1,0 +1,20 @@
+package com.ramotetech.curso.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.ramotetech.curso.entities.User;
+import com.ramotetech.curso.repositories.UserRepository;
+
+public class UserService {
+	
+	@Autowired
+	private UserRepository repository;
+	
+	@SuppressWarnings("unused")
+	private List<User> findAll(){
+		return repository.findAll();
+		
+	}
+}

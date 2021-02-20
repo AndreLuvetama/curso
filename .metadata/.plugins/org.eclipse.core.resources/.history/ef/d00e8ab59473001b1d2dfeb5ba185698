@@ -1,0 +1,5 @@
+package com.ramotetech.curso.resources;
+
+public class UserResource {
+
+}

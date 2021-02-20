@@ -1,0 +1,5 @@
+package com.ramotetech.curso.entities;
+
+public class User {
+
+}
