@@ -1,12 +1,15 @@
 package com.ramotetech.curso.entities;
 
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 
 @Entity
@@ -20,6 +23,8 @@ public class Category implements Serializable {
 	private Long id;
 	private String name;
 	
+	@Transient // impede o JPA de interpretar o Set e isso evita erro
+	private Set<Product> product = new HashSet<>(); // Uma categoria com vários prod diferentes	
 	public Category(){}
 
 	public Category(Long id, String name) {
@@ -42,6 +47,10 @@ public class Category implements Serializable {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public Set<Product> getProduct() {
+		return product;
 	}
 
 	
