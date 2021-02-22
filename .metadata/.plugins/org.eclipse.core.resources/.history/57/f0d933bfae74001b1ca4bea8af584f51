@@ -10,9 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
+import javax.persistence.Transient;
 
 
 @Entity
@@ -27,8 +25,7 @@ public class Category implements Serializable {
 	private String name;
 	
 	//@Transient // impede o JPA de interpretar o Set e isso evita erro
-	@JsonIgnore
-	@ManyToMany(mappedBy = "categories") // faz referencia ao relacionamento a coleção set categories
+	@ManyToMany(mappedBy = "categories")
 	private Set<Product> product = new HashSet<>(); // Uma categoria com vários prod diferentes	
 	public Category(){}
 
