@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="/home/andre/Documentos/Estudos/spring-boot-mongodb-docker-compose-"/>
 			<item value="/home/andre/Documentos/Estudos/salesManagement"/>
 		</list>
 		<list key="projectNameTemplate">

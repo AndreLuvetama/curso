@@ -1,4 +1,4 @@
-GitRepositoriesView.GitDirectories=/home/andre/Documentos/Estudos/salesManagement/.git\:
-GitRepositoriesView.GitDirectories.relative=salesManagement/.git\:
+GitRepositoriesView.GitDirectories=/home/andre/Documentos/Estudos/salesManagement/.git\:/home/andre/Documentos/Estudos/.git\:
+GitRepositoriesView.GitDirectories.relative=salesManagement/.git\:.git\:
 core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1
