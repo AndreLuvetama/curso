@@ -1,0 +1,10 @@
+package com.ramotetech.curso.entities.pk;
+
+import com.ramotetech.curso.entities.Order;
+import com.ramotetech.curso.entities.Product;
+
+public class OrderItemPK {
+	private Order order;
+	private Product product;
+
+}
