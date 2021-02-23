@@ -11,7 +11,6 @@ import org.springframework.context.annotation.Profile;
 import com.ramotetech.curso.entities.Category;
 import com.ramotetech.curso.entities.Order;
 import com.ramotetech.curso.entities.OrderItem;
-import com.ramotetech.curso.entities.Payment;
 import com.ramotetech.curso.entities.Product;
 import com.ramotetech.curso.entities.User;
 import com.ramotetech.curso.entities.enms.OrderStatus;
@@ -88,11 +87,6 @@ public class TestConfig implements CommandLineRunner {
 		
 		orderItemRepository.saveAll(Arrays.asList(oi1, oi2, oi3, oi4));
 		
-	
-		Payment pay1 = new Payment(null, Instant.parse("2019-06-20T21:53:07Z"), o1);
-		o1.setPayment(pay1);
-		//Neste caso invocamos o repositorio da classe independente da associação
-		orderRepository.save(o1);
 		
 	}
 

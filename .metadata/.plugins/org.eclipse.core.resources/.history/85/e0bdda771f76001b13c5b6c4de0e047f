@@ -42,7 +42,7 @@ public class Order  implements Serializable {
 	@OneToMany(mappedBy = "id.order") // o pedido está id e liberar para o order
 	private Set<OrderItem> items = new HashSet<>();
 	
-	@OneToOne(mappedBy = "order", cascade = CascadeType.ALL) // Classe independente do relac
+	@OneToOne(mappedBy = "order", cascade = CascadeType.ALL)
 	private Payment payment;
 	
 	public Order() {}
