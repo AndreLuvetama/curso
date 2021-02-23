@@ -1,0 +1,9 @@
+package com.ramotetech.curso.repositories;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.ramotetech.curso.entities.User;
+
+public interface OrderItemRepository extends JpaRepository<User, Long> {
+
+}

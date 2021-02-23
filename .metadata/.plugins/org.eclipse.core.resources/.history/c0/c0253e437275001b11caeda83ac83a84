@@ -1,4 +1,4 @@
-package com.ramotetech.curso.entities;
+package com.educandoweb.course.entities;
 
 import java.io.Serializable;
 
@@ -6,9 +6,8 @@ import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-
+import com.educandoweb.course.entities.pk.OrderItemPK;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.ramotetech.curso.entities.pk.OrderItemPK;
 
 @Entity
 @Table(name = "tb_order_item")

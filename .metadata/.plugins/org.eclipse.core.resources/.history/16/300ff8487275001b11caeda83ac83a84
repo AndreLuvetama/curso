@@ -8,7 +8,6 @@ import javax.persistence.Table;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.ramotetech.curso.entities.pk.OrderItemPK;
 
 @Entity
 @Table(name = "tb_order_item")
