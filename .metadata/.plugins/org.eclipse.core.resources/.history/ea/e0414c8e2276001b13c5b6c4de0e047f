@@ -66,7 +66,6 @@ public class OrderItem implements Serializable {
 		this.price = price;
 	}
 
-	// Na plataforma Json os metodos são implementados com get por é getSubTotal
 	public Double getSubTotal() {
 		return price * quantity;
 	}
