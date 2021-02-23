@@ -36,7 +36,7 @@ public class UserResource {
 		return ResponseEntity.ok().body(obj);
 	}
 	
-	@PostMapping
+	@PostMapping(value = "/{id}")
 	public ResponseEntity<User> insert(@RequestBody User obj){ //@@RequestBody informa que os dados vão chegar em format Json
 		obj = service.insert(obj);
 		//return ResponseEntity.ok().body(obj); 
@@ -45,7 +45,7 @@ public class UserResource {
 		return ResponseEntity.created(uri).body(obj);
 	}
 	
-	@DeleteMapping(value = "/{id}")
+	@DeleteMapping
 	public ResponseEntity<Void> delete(@PathVariable Long id){ //@PathVariable para o id ser reconhecido como uma variavel
 		service.delete(id);
 		return ResponseEntity.noContent().build();
