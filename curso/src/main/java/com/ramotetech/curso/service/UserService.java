@@ -1,16 +1,22 @@
 package com.ramotetech.curso.service;
 
+
+
 import java.util.List;
 import java.util.Optional;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.IncorrectUpdateSemanticsDataAccessException;
-import org.springframework.stereotype.Component;
+
+import org.springframework.stereotype.Service;
+
 
 import com.ramotetech.curso.entities.User;
 import com.ramotetech.curso.repositories.UserRepository;
+import com.ramotetech.curso.service.exceptions.ResourceNotFoundException;
 
-@Component // registra o componente do springBoot
+
+@Service // registra o componente do springBoot
 public class UserService {
 	
 	@Autowired
@@ -22,8 +28,8 @@ public class UserService {
 	}
 	
 	public User findById(Long id) {
-		Optional<User> obj  = repository.findById(id);		
-		return obj.get();
+		Optional<User> obj = repository.findById(id);
+		return obj.orElseThrow(() -> new ResourceNotFoundException(id));
 	}
 	public User insert(User obj) {
 		return repository.save(obj);
